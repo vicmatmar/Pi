@@ -5,7 +5,7 @@ import profile
 # I'm not checking for numbers such as 2 or less
 def IsPrimeNumber(number):
     # Check division remainders (mod) starting from 2 up to the number-1
-    for x in range (2, number-1):
+    for x in range (2, (int)(number/2)):
         mod = number % x;
         if mod == 0:
             return False;
@@ -24,7 +24,7 @@ def main():
 
 
     profile.run(
-        'IsPrimeNumberRangeChecker(3, 10000)'
+        'IsPrimeNumberRangeChecker(3, 10000000)'
     )
 
     
